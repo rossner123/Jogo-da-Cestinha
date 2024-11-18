@@ -1,0 +1,124 @@
+/* Estilos gerais */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: cursive;
+  background-color: #e0f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  margin-bottom: 0;
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+}
+
+#gameArea {
+  position: relative;
+  width: 400px;
+  height: 470px;
+  background-color: #ffffff;
+  border: 2px solid #000;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+
+#cesta {
+  position: absolute;
+  bottom: 10px;
+  left: 170px;
+  width: 70px;
+  height: 40px;
+  background: linear-gradient(45deg, #d08a2c 25%, #e0a94d 25%, #e0a94d 50%, #d08a2c 50%, #d08a2c 75%, #e0a94d 75%);
+  background-size: 20px 20px; /* Padrão de "trança" */
+  border: 3px solid #8b5a2b;
+  border-radius: 5px 5px 17px 17px; /* Borda arredondada na parte superior */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* Sombra para profundidade */
+}
+
+.objeto {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #ff4d4d; /* Vermelho de maçã */
+  border-radius: 50%; /* Forma arredondada */
+  box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.2), 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombras para profundidade */
+}
+
+/* Folha da maçã */
+.objeto::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 7px;
+  width: 10px;
+  height: 5px;
+  background-color: #2ecc71; /* Verde para a folha */
+  border-radius: 5px 5px 0 0; /* Bordas arredondadas na parte superior */
+  transform: rotate(-30deg); /* Inclinação da folha */
+}
+
+/* Cabinho da maçã */
+.objeto::after {
+  content: '';
+  position: absolute;
+  top: -7px;
+  left: 12px;
+  width: 3px;
+  height: 7px;
+  background-color: #8b5a2b; /* Marrom para o cabinho */
+  border-radius: 2px;
+}
+
+
+.objeto-vermelho {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #242424; 
+  border-radius: 50%;
+}
+
+
+.item-especial {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: green;
+}
+
+#score, #timer {
+  margin: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+#reiniciarBtn {
+  padding: 12.5px 30px;
+  border: 0;
+  border-radius: 100px;
+  background-color: #2ba8fb;
+  color: #ffffff;
+  font-weight: Bold;
+  transition: all 0.5s;
+}
+
+#reiniciarBtn:hover {
+  background-color: #6fc5ff;
+  box-shadow: 0 0 20px #6fc5ff50;
+  transform: scale(1.1);
+}
+
+#reiniciarBtn:active {
+  background-color: #3d94cf;
+  transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
+}
